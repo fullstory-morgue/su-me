@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+#include /usr/share/cdbs/1/rules/simple-patchsys.mk
+#include /usr/share/cdbs/1/class/makefile.mk
+
+#DEB_MAKE_INSTALL_TARGET := DESTDIR=$(DEB_BUILDDIR)/debian/tmp install
+
+PACKAGE_NAME := kanotix-su
+
+common-install-arch common-install-indep:: common-install-impl
+common-install-impl::
+	# main executable
+	install -m 0755 -d $(CURDIR)/debian/$(PACKAGE_NAME)/usr/bin
+	install -m 0755    $(CURDIR)/$(PACKAGE_NAME).sh $(CURDIR)/debian/$(PACKAGE_NAME)/usr/bin/$(PACKAGE_NAME)
+	

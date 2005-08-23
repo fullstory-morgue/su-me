@@ -1,0 +1,73 @@
+#!/bin/sh
+# minimal su Wrapper for various cases
+# (C) Stefan Lippers-Hollmann 2005, GNU GPL
+
+# yes, this code is not really pretty, but it works...
+# only one exit is really needed, the rest is only for debugging purposes.
+
+PATH=$PATH:/sbin:/usr/sbin:/usr/X11R6/bin
+
+# become root
+if [ "`id -u`" != "0" ]; then
+	if [ -e /etc/sysconfig/live -o -d /KNOPPIX ]; then
+		# live
+		exec sudo "$@" || exit 1
+		exit 0
+	else
+		if [ -n "$DISPLAY" ]; then
+			# X11 active
+			if [ -x /usr/bin/dcop ]; then
+				# KDE is installed
+				dcop kicker &> /dev/null
+				if [ "$?" = "0" ]; then #fixme
+					# KDE is running
+					if [ -x /usr/bin/kdesu ]; then
+						# kdesu is installed
+						exec kdesu -- "$@" || exit 2
+						exit 0
+					else
+						# no kdesu
+						if [ -x /usr/bin/gksu ]; then
+							# try gksu
+							exec gksu -- "$@" || exit 3
+							exit 0
+						else
+							# damn it
+							exit 4
+						fi
+					fi
+				else
+					# no KDE
+					if [ -x /usr/bin/gksu ]; then
+						exec gksu -- "$@" || exit 5
+						exit 0
+					fi
+				fi
+			else
+				# no kde
+				if [ -x /usr/bin/gksu ]; then
+					exec gksu -- "$@" || exit 6
+					exit 0
+				else
+					if [ -x /usr/bin/kdesu ]; then
+						# more than unlikely, but...
+						exec kdesu -- "$@" || exit 7
+						exit 0
+					fi
+				fi
+			fi
+		else
+			# cli
+			exec su -c "$@" || exit 8
+			exit 0
+		fi
+	fi
+else
+	# we are already root, so why did you call us...?
+	exec "$@"
+	exit 0
+fi
+
+# damned, this shouldn't happen
+exit 999
+

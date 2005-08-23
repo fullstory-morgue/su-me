@@ -1,0 +1,13 @@
+Source: kanotix-su
+Section: admin
+Priority: optional
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends-Indep: cdbs (>= 0.4.21), debhelper (>= 4.0.0)
+Standards-Version: 3.6.1
+
+Package: kanotix-su
+Architecture: all
+Depends: sudo
+Suggests: gksu, kdesu
+Description: su wrapper for KANOTIX
+ This package provides a simple su wrapper for various uses.

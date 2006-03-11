@@ -1,3 +1,9 @@
+kanotix-su (0.2.2) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 12 Mar 2006 00:23:15 +0100
+
 kanotix-su (0.2.1) unstable; urgency=low
 
   * bump compat level to 5.

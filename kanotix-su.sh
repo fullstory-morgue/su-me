@@ -5,11 +5,15 @@
 # yes, this code is not really pretty, but it works...
 # only one exit is really needed, the rest is only for debugging purposes.
 
+# override tool behaviour through distro-defaults
+FLL_DISTRO_MODE="installed"
+[ -r /etc/default/distro ] && source /etc/default/distro
+
 PATH=$PATH:/sbin:/usr/sbin:/usr/X11R6/bin
 
 # become root
 if [ "`id -u`" != "0" ]; then
-	if [ -e /etc/sysconfig/live -o -d /KNOPPIX ]; then
+	if [ "$FLL_DISTRO_MODE" = "live" ]; then
 		# live
 		exec sudo "$@" || exit 1
 		exit 0

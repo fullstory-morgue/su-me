@@ -1,3 +1,10 @@
+kanotix-su (0.2.1) unstable; urgency=low
+
+  * bump compat level to 5.
+  * knoppix --> kanotix transition.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 12 Mar 2006 00:21:50 +0100
+
 kanotix-su (0.2) unstable; urgency=low
 
   * add root path (e.g. for xauth).

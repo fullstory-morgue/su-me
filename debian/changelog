@@ -2,8 +2,10 @@ kanotix-su (0.2.2) unstable; urgency=low
 
   * remove X.org <7 compatibility.
   * add -t to kdesu to see the output of cli applications.
+  * remove lintion overrides.
+  * bump standards version to 3.7.2.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 20 Sep 2006 19:46:56 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 20 Sep 2006 19:51:51 +0200
 
 kanotix-su (0.2.1) unstable; urgency=low
 

@@ -1,1 +1,1 @@
-debian/overrides/kanotix-su /usr/share/lintian/overrides
+kanotix-su	usr/bin/

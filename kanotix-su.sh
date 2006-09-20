@@ -9,7 +9,7 @@
 FLL_DISTRO_MODE="installed"
 [ -r /etc/default/distro ] && source /etc/default/distro
 
-PATH=$PATH:/sbin:/usr/sbin:/usr/X11R6/bin
+PATH="$PATH:/sbin:/usr/sbin"
 
 # become root
 if [ "`id -u`" != "0" ]; then
@@ -27,7 +27,7 @@ if [ "`id -u`" != "0" ]; then
 					# KDE is running
 					if [ -x /usr/bin/kdesu ]; then
 						# kdesu is installed
-						exec kdesu -- "$@" || exit 2
+						exec kdesu -t -- "$@" || exit 2
 						exit 0
 					else
 						# no kdesu
@@ -55,7 +55,7 @@ if [ "`id -u`" != "0" ]; then
 				else
 					if [ -x /usr/bin/kdesu ]; then
 						# more than unlikely, but...
-						exec kdesu -- "$@" || exit 7
+						exec kdesu -t -- "$@" || exit 7
 						exit 0
 					fi
 				fi

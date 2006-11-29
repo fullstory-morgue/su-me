@@ -1,9 +1,9 @@
-kanotix-su (0.2.3) UNRELEASED; urgency=low
+su-me (0.3.0) unstable; urgency=low
 
-  * NOT RELEASED YET
-  * fix lintian errors. 
+  * fix lintian errors.
+  * initial distribution agnostic release, don't conflict with kanotix-su yet.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed,  1 Nov 2006 00:32:26 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 29 Nov 2006 17:32:02 +0100
 
 kanotix-su (0.2.2) unstable; urgency=low
 

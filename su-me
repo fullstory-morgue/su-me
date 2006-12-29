@@ -7,7 +7,7 @@
 
 # override tool behaviour through distro-defaults
 FLL_DISTRO_MODE="installed"
-[ -r /etc/default/distro ] && source /etc/default/distro
+[ -r /etc/default/distro ] && . /etc/default/distro
 
 PATH="$PATH:/sbin:/usr/sbin"
 

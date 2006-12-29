@@ -1,8 +1,12 @@
 su-me (0.3.2) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed,  6 Dec 2006 11:54:20 +0100
+  [ Kel Modderman ]
+  * Remove 'source' bashism from script using /bin/sh punchline.
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 29 Dec 2006 11:29:31 +1000
 
 su-me (0.3.1) unstable; urgency=low
 

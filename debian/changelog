@@ -1,7 +1,4 @@
-su-me (0.3.2) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+su-me (0.3.2) unstable; urgency=low
 
   [ Kel Modderman ]
   * Remove 'source' bashism from script using /bin/sh punchline.

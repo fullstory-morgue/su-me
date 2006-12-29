@@ -5,8 +5,10 @@ su-me (0.3.2) UNRELEASED; urgency=low
 
   [ Kel Modderman ]
   * Remove 'source' bashism from script using /bin/sh punchline.
+  * Fix handling of su -c. $@ was being mistaken for providing additional su
+    options in some cases, use $* instead.
 
- -- Kel Modderman <kel@otaku42.de>  Fri, 29 Dec 2006 11:29:31 +1000
+ -- Kel Modderman <kel@otaku42.de>  Fri, 29 Dec 2006 11:54:55 +1000
 
 su-me (0.3.1) unstable; urgency=low
 

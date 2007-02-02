@@ -1,9 +1,5 @@
-su-me (0.3.3) UNRELEASED; urgency=low
+su-me (0.3.3) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Niall Walsh ]
   * Use --nonewdcop with kdesu
 
  -- Niall Walsh <niallwalsh@users.berlios.de>  Fri,  2 Feb 2007 00:04:35 +0000

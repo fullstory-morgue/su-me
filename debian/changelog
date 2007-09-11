@@ -1,8 +1,9 @@
 su-me (0.3.4) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * add VCS control headers.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri,  2 Feb 2007 03:45:30 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 11 Sep 2007 20:25:53 +0200
 
 su-me (0.3.3) unstable; urgency=low
 

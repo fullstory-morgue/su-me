@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: cdbs (>= 0.4.21), debhelper (>= 5)
-Standards-Version: 3.7.2
+Standards-Version: 3.7.3
 Vcs-Svn: svn://svn.berlios.de/fullstory/su-me/trunk
 Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/su-me/trunk/
 
